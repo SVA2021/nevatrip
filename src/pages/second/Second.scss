@@ -1,0 +1,30 @@
+  html {
+    background-color: #49aada;
+  }
+
+  .blog {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 15px;
+    width: 990px;
+    max-width: 95%;
+    background-color: #fff;
+
+
+    table {
+      margin: 1em 0;
+      border: 1px solid;
+      border-collapse: collapse;
+      width: 100%;
+
+      tr {
+        td {
+          width: 25%;
+          padding: 2em 0.1em;
+          border: 1px solid;
+          text-align: center;
+          word-break: break-all;
+        }
+      }
+    }
+  }
