@@ -1,0 +1,20 @@
+  .wrapper {
+    margin: 10vh auto;
+    padding: 1em;
+    background-color: aqua;
+  }
+
+  .section {
+    margin: 1em auto;
+  }
+
+  .select {
+    margin: 1em auto;
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 8px;
+
+    option{
+      padding: 0.5em;
+    }
+  }

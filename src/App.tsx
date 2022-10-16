@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Main} from './pages/main';
 import {Second} from './pages/second';
 import {Table} from './pages/table';
+import {TimeCalc} from './pages/time';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       {task === 0 && <Main />}
       {task === 1 && <Second />}
       {task === 2 && <Table />}
+      {task === 3 && <TimeCalc />}
     </div>
   );
 }

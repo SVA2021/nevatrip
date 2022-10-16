@@ -16,3 +16,4 @@ export interface CardLabelType {
 }
 
 export type LabelType = 'new' | 'all_time' | 'special' | 'sale'
+export type Direction = 'A' | 'B' | 'AB'
