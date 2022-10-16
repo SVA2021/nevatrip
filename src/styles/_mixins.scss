@@ -2,7 +2,14 @@
 
 // desktop devices
 @mixin desktop {
-  @media ( min-width: $mq-xl ) {
+  @media (min-width: $mq-xl ) {
+    @content;
+  }
+}
+
+// tablet devices
+@mixin tablet {
+  @media (min-width: $mq-sm ) {
     @content;
   }
 }
