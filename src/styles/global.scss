@@ -22,3 +22,14 @@ a {
 * {
 	box-sizing: border-box;
 }
+
+.container {
+	width: $mq-xs;
+	margin: 0 auto;
+	padding: 24px 16px;
+
+	@include desktop {
+		width: $mq-xl;
+		padding: 24px 160px;
+	}
+}

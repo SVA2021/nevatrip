@@ -1,0 +1,199 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.card__wrapper {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: $card-border-radius;
+    border: 0.3px solid $gray;
+
+    @include desktop {
+        flex-direction: row;
+        margin-bottom: 60px;
+    }
+}
+
+.card__image {
+    width: 100%;
+    max-height: 100%;
+
+    @include desktop {
+        width: 470px;
+    }
+}
+
+.card__content {
+    padding: 14px 12px 24px 12px;
+
+    @include desktop {
+        padding: 14px 12px 24px 30px;
+    }
+}
+
+.card__duration {
+    display: flex;
+    align-items: center;
+    color: $gray;
+    font-size: 12px;
+    line-height: 20px;
+
+    svg {
+        fill: $gray;
+        margin-right: 9px;
+    }
+}
+
+.card__title {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+
+    @include desktop {
+        flex-direction: column-reverse;
+        font-size: 26px;
+        line-height: 34px;
+    }
+}
+
+.card__title__pre {
+    @include desktop {
+        display: none;
+    }
+}
+
+ul.card__features {
+    color: $dark;
+    padding-left: 24px;
+
+    li.features__item {
+        padding-left: 12px;
+        margin-bottom: 10px;
+        list-style-image: url('../../icon/checkmark.svg');
+        font-size: 14px;
+        line-height: 20px;
+
+        @include desktop {
+            font-size: 20px;
+            // p {
+            //     flex: 1 0 auto;
+            // }
+        }
+    }
+
+    .shipments {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include desktop {
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+        }
+    }
+}
+
+.card__shipment {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    @include desktop {
+        margin-top: 0px;
+        margin-left: 8px;
+        gap: 6px;
+    }
+
+    span {
+        display: block;
+        margin-right: 20px;
+    }
+}
+
+.card__details {
+    margin-top: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include desktop {
+        justify-content: flex-start;
+    }
+
+    .details__price {
+        @include desktop {
+            margin-right: 20px;
+        }
+
+        .price__main {
+            font-size: 30px;
+            line-height: 20px;
+
+            @include desktop {
+                font-size: 36px;
+            }
+        }
+
+        .price__now {
+            margin-top: 8px;
+            font-size: 10px;
+            line-height: 20px;
+
+            span {
+                margin-left: 0.5em;
+            }
+
+            @include desktop {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .details__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 42px;
+        background: #FED74B;
+        border: 0.5px solid #CBA500;
+        border-radius: 20px;
+        font-size: 14px;
+
+        @include desktop {
+            padding: 16px 42px;
+            font-size: 18px;
+        }
+    }
+}
+
+.card__btn {
+
+    width: 63px;
+    height: 24px;
+    font-size: 16px;
+    background-color: $skyblue;
+    color: #000;
+    text-align: center;
+    line-height: 24px;
+    border-radius: $time-border-radius;
+    transition: all 0.25s;
+
+    &:hover {
+        color: #fff;
+        background-color: $lightblue;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    @include desktop {
+        width: 73px;
+        height: 28px;
+        line-height: 28px;
+    }
+}

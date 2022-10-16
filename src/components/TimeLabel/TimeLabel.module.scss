@@ -1,0 +1,25 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.label {
+    width: 63px;
+    height: 24px;
+    background-color: $skyblue;
+    color: #000;
+    text-align: center;
+    line-height: 24px;
+    border-radius: $time-border-radius;
+    transition: all 0.25s;
+
+    &:hover {
+        color: #fff;
+        background-color: $lightblue;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    @include desktop {
+        width: 73px;
+        height: 28px;
+        line-height: 28px;
+    }
+}
