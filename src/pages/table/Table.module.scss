@@ -1,0 +1,31 @@
+.wrapper {
+    width: 100%;
+    margin: 10vh auto;
+
+    table {
+
+        td,
+        th {
+            padding: 0.5em;
+            text-align: center;
+            word-break: break-all;
+            font-size: 14px;
+
+            span {
+                color: red;
+            }
+        }
+    }
+
+    p {
+        margin: 1em auto;
+        line-height: 150%;
+
+        code {
+            margin: 0.5em;
+            padding: 0.5em;
+            display: inline-block;
+            background-color: yellow;
+        }
+    }
+}
