@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/nevatrip/static/css/main.929ff0ca.css",
+    "main.js": "/nevatrip/static/js/main.2ebd8cec.js",
+    "static/js/787.aaf965d3.chunk.js": "/nevatrip/static/js/787.aaf965d3.chunk.js",
+    "static/media/spb_1_2x.png": "/nevatrip/static/media/spb_1_2x.531b3680c5e5b4a20685.png",
+    "static/media/spb_1.png": "/nevatrip/static/media/spb_1.ef9ae6ea477da6e9ef92.png",
+    "static/media/clock.svg": "/nevatrip/static/media/clock.9f2dca8e3ee35e483f875e05d9243768.svg",
+    "index.html": "/nevatrip/index.html",
+    "static/media/checkmark.svg": "/nevatrip/static/media/checkmark.9140d4d53885657bf775.svg",
+    "main.929ff0ca.css.map": "/nevatrip/static/css/main.929ff0ca.css.map",
+    "main.2ebd8cec.js.map": "/nevatrip/static/js/main.2ebd8cec.js.map",
+    "787.aaf965d3.chunk.js.map": "/nevatrip/static/js/787.aaf965d3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.929ff0ca.css",
+    "static/js/main.2ebd8cec.js"
+  ]
+}
