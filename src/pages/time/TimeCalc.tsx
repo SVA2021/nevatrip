@@ -1,6 +1,7 @@
-import {useState} from 'react'
+import {useEffect, useMemo, useState} from 'react'
 import {TimeFromA, TimeFromB} from '../../db/data'
 import s from './TimeCalc.module.scss'
+import {FiftyMin, getResultMsg} from './TimeCalc.service'
 
 export function TimeCalc() {
 
@@ -16,8 +17,15 @@ export function TimeCalc() {
         || (direction === 'AB' && timeA && timeB)
     )
 
-    console.log(new Date(TimeFromA[0]))
+    const TimeFromBFiltered = useMemo(() => {
+        if (direction !== 'AB' || !timeA) return TimeFromB
+        let dateA = +(new Date(timeA))
+        return TimeFromB.filter((time) => +(new Date(time)) - FiftyMin > dateA)
+    }, [direction, timeA])
 
+    useEffect(() => {
+        if (!isReady && result !== undefined) setResult(undefined)
+    }, [isReady, result])
 
     return (
         <div className={s.wrapper} >
@@ -47,7 +55,7 @@ export function TimeCalc() {
                     <p>Выберите время отправления из B</p>
                     <select className={s.select} name="B" onChange={(e) => setTimeB(e.target.value)} >
                         <option value={undefined}>отправление из В</option>
-                        {TimeFromB.map((time) =>
+                        {TimeFromBFiltered.map((time) =>
                             <option value={time} key={time} >{time}</option>
                         )}
                     </select>
@@ -61,20 +69,20 @@ export function TimeCalc() {
             }
 
             {isReady &&
-                <button className={s.select} disabled={qty < 1} >
+                <button
+                    className={s.select}
+                    disabled={qty < 1}
+                    onClick={() => setResult(getResultMsg(timeA, timeB, direction, qty))}
+                >
                     Посчитать
                 </button>
             }
 
             {isReady && result &&
                 <div className={s.result}>
-                    Вы выбрали 4 билета по маршруту из A в B стоимостью 4000р.
-                    Это путешествие займет у вас 40 минут.
-                    Теплоход отправляется в 12-00, а прибудет в 18-00.
+                    {result}
                 </div>
             }
-
-
         </div>
     )
 }

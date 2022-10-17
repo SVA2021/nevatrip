@@ -1,7 +1,7 @@
   .wrapper {
     margin: 10vh auto;
     padding: 1em;
-    background-color: aqua;
+    background-color: green;
   }
 
   .section {
@@ -17,4 +17,10 @@
     option{
       padding: 0.5em;
     }
+  }
+
+  .result {
+    margin: 1em;
+    padding: 1em;
+    background-color: orange;
   }
