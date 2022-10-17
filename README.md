@@ -1,46 +1,37 @@
-# Getting Started with Create React App
+# Test Task for NevaTrip by SVA (created with Create React App)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Верстка
 
-## Available Scripts
+### Верстка макета
+    Добавил от себя брейкпоинт для планшета, чтобы немного улучшить внешний вид.  
+    В целом уже в процессе верстки осознал окончательно, что задание скорее не на саму верстку,
+    а на наличие дизайнерских способностей, т.к. макет имеет вагон и тележку недочетов.
+    Мое мнение - фронтендер и/или верстальщик должны активно участвовать в доработках макета, т.к. за всем не уследишь, 
+    но при этом должен быть человек, задающий финальные решения 
+    (профессиональный дизайнер или наиболее опытный в этом деле сотрудник).
+    Для более точной подгонки макета самостоятельно нужно больше понимания того, сколько и какие будут данные в карточке.
 
-In the project directory, you can run:
+### Корректировка таблицы
+    Глазам больно было смотреть на это безобразие, потому перекинул исходнки к себе и подправил.  
 
-### `npm start`
+    А причина некорректного отображения была  
+    + несоответствие типоразмера паддингов и размера ширины (% и пиксели)
+    + ошибки в задании ширины столбцов (3 * 25% + 82% ну никак не 100%)
+    + чтобы ширина столбцов менялась с шириной экрана надо также добавить "word-break"
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Задачи
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 1. Билеты на событие
+    1. Для добавления опциональных билетов достаточно всего 2 новых поля: тип скидки и ее размер,  
+    при таком раскладе можно будет просто расширять тип скидки, не ломая верстку страницы. 
+    P.S. подразумевается , что все расчеты происходят на бэкенде.  
+     + sale_type: 'group' | 'special' | 'none'
+     + discont: number
 
-### `npm test`
+    2. Для добавления номера билета надо в сам штрихкод добавить опциональный знак, обозначающий порядковый номер билета. 
+    В самой таблице и задании нет требования по отображению кто когда зачекинился. 
+    Поэтому достаточно отобразить для штрихкода допзнаки (красным) и показать макс знак в [].
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 2. Время из A в B
+    При всей своей простоте задачка очень практичная, что делает ее очень интересной.
+    В ее плане расширения можно например добавлять билеты на домик "на том берегу", и возвращатьсся в другой день.
